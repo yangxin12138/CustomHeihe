@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavigationItemStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="enforceTextAppearance">true</item>
+        <item name="enforceMaterialTheme">true</item>
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="itemBackground">@null</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="itemIconTint">@color/item_color_selector</item>
+        <item name="itemTextAppearanceInactive">?attr/textAppearanceCaption</item>
+        <item name="itemTextAppearanceActive">?attr/textAppearanceCaption</item>
+        <item name="itemTextColor">@color/item_text_color_selector</item>
+        <item name="itemRippleColor">@color/mtrl_navigation_bar_ripple_color</item>
+    </style>
+</resources>

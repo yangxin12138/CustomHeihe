@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/home"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Home" />
+
+    <ImageButton
+        android:id="@+id/btnNotification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/notification"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Notification" />
+
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/add"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Add" />
+
+    <ImageButton
+        android:id="@+id/btnFavorite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/favorite"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Favorite" />
+    <ImageButton
+        android:id="@+id/btnUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/user"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="User" />
+
+</LinearLayout>
