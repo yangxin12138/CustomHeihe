@@ -5,4 +5,5 @@
     <color name="red">#C34B4B</color>
     <color name="home_text_unchecked">#8C8C8C</color>
     <color name="transparency">#8000</color>
+    <color name="divider_color">#EBEBEB</color>
 </resources>
