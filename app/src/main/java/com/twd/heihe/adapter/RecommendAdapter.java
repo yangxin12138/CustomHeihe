@@ -1,5 +1,7 @@
 package com.twd.heihe.adapter;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,10 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.twd.heihe.R;
 import com.twd.heihe.bean.RecommendItemBeans;
+import com.youth.banner.Banner;
+import com.youth.banner.adapter.BannerImageAdapter;
+import com.youth.banner.holder.BannerImageHolder;
+import com.youth.banner.indicator.CircleIndicator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,10 +27,13 @@ public class RecommendAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     private static final int TYPE_ITEM = 1;
     private List<RecommendItemBeans> recommendList;
     private boolean showBanner;
-    BannerAdapter bannerAdapter;
-    public RecommendAdapter(List<RecommendItemBeans> recommendList,boolean showBanner){
+    private Banner banner;
+    private List<Integer> banner_data;
+    private Context context;
+    public RecommendAdapter(List<RecommendItemBeans> recommendList,boolean showBanner,Context context){
         this.recommendList = recommendList;
         this.showBanner = showBanner;
+        this.context = context;
     }
     @NonNull
     @Override
@@ -75,14 +84,31 @@ public class RecommendAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         public BannerViewHolder(@NonNull View itemView) {
             super(itemView);
             //初始化Banner视图
-            ViewPager viewPager = itemView.findViewById(R.id.banner_image);
-            List<Integer> imageList = new ArrayList<>();
-            imageList.add(R.drawable.battle);
-            imageList.add(R.drawable.caodong);
-            imageList.add(R.drawable.a);
-            bannerAdapter = new BannerAdapter(imageList);
-            viewPager.setAdapter(bannerAdapter);
+            initData();
+            banner = itemView.findViewById(R.id.banner_image);
+            banner.setAdapter(new BannerImageAdapter<Integer>(banner_data) {
+                @Override
+                public void onBindView(BannerImageHolder holder, Integer data, int position, int size) {
+                    holder.imageView.setImageResource(data);
+                }
+            });
+
+            //开启循环轮播
+            banner.isAutoLoop(true);
+            banner.setIndicator(new CircleIndicator(context));
+            banner.setScrollBarFadeDuration(1000);
+            //设置指示器的颜色
+            banner.setIndicatorSelectedColor(Color.WHITE);
+            //开始轮播
+            banner.start();
         }
+    }
+
+    private void initData(){
+        banner_data = new ArrayList<>();
+        banner_data.add(R.drawable.battle);
+        banner_data.add(R.drawable.caodong);
+        banner_data.add(R.drawable.a);
     }
 
 

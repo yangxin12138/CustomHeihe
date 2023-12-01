@@ -60,7 +60,7 @@ public class RecommendFragment extends Fragment {
         mRecommendListData.add(eRecommend);
 
         //创建适配器
-        mRecommendAdapter = new RecommendAdapter(mRecommendListData,true);
+        mRecommendAdapter = new RecommendAdapter(mRecommendListData,true,context);
         //设置适配器
         mRecommendRecyclerView.setAdapter(mRecommendAdapter);
         return view;
