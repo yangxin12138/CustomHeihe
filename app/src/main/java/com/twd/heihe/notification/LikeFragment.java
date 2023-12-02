@@ -1,66 +1,80 @@
 package com.twd.heihe.notification;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.twd.heihe.R;
+import com.twd.heihe.adapter.LikeAdapter;
+import com.twd.heihe.bean.LikeItemBean;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link LikeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class LikeFragment extends Fragment {
+    private Context context;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public LikeFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment LikeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static LikeFragment newInstance(String param1, String param2) {
-        LikeFragment fragment = new LikeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private RecyclerView mLikeRecyclerView;
+    private List<LikeItemBean> mLikeListData;
+    private LikeAdapter likeAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        context = getActivity();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_like, container, false);
+        View view = inflater.inflate(R.layout.fragment_like,container,false);
+        mLikeRecyclerView = (RecyclerView) view.findViewById(R.id.likeRecycler);
+        mLikeRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+        //获取当前时间
+        Date currentDate = new Date();
+        //定义时间格式
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        //将日期转化为字符串
+        String dateString = dateFormat.format(currentDate);
+        //初始化数据
+        mLikeListData = new ArrayList<>();
+        LikeItemBean aLikeBean = new LikeItemBean(R.drawable.a,
+                "不爱吃饭的蔷谙",ActionEnum.LIKE_YOUR_COMMENT,
+                "夹子音太难受了",dateString);
+        LikeItemBean bLikeBean = new LikeItemBean(R.drawable.b,
+                "星海围蝴蝶",ActionEnum.LIKE_YOUR_COMMENT,
+                "夹子音太难受了",dateString);
+        LikeItemBean cLikeBean = new LikeItemBean(R.drawable.c,
+                "iii-ISLAND",ActionEnum.LIKE_YOUR_COMMENT,
+                "回复@Bettie_yyy: 杨花大桥？",dateString);
+        LikeItemBean dLikeBean = new LikeItemBean(R.drawable.d,
+                "奋斗的蜜缇",ActionEnum.COLLECT_YOUR_ALBUM,
+                "[民谣]",dateString);
+        LikeItemBean eLikeBean = new LikeItemBean(R.drawable.e,
+                "奋斗的蜜提",ActionEnum.COLLECT_YOUR_ALBUM,
+                "你赠送的黑胶会员7天",dateString);
+        LikeItemBean fLikeBean = new LikeItemBean(R.drawable.f,
+                "你丫儿的a",ActionEnum.LIKE_YOUR_VLOG,
+                "[迎新晚会的宣美]",dateString);
+        mLikeListData.add(aLikeBean);
+        mLikeListData.add(bLikeBean);
+        mLikeListData.add(cLikeBean);
+        mLikeListData.add(dLikeBean);
+        mLikeListData.add(eLikeBean);
+        mLikeListData.add(fLikeBean);
+        //创建适配器
+        likeAdapter = new LikeAdapter(mLikeListData);
+        //设置适配器
+        mLikeRecyclerView.setAdapter(likeAdapter);
+        return view;
     }
 }

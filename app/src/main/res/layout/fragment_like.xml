@@ -5,12 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".notification.LikeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/likeRecycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="点赞"
-        android:gravity="center"
-        android:textSize="30sp"/>
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
