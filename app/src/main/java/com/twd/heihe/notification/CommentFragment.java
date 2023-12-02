@@ -1,66 +1,78 @@
 package com.twd.heihe.notification;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.twd.heihe.R;
+import com.twd.heihe.adapter.CommentAdapter;
+import com.twd.heihe.bean.CommentItemBean;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CommentFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class CommentFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public CommentFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CommentFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CommentFragment newInstance(String param1, String param2) {
-        CommentFragment fragment = new CommentFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private Context context;
+    private RecyclerView mCommentRecyclerView;
+    private List<CommentItemBean> mCommentListData;
+    private CommentAdapter commentAdapter;
+    String myContent = "我的评论: 夹子音太难受了";
+    String replyMe = "回复我:";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        context = getActivity();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_comment, container, false);
+       View view = inflater.inflate(R.layout.fragment_comment,container,false);
+       mCommentRecyclerView = (RecyclerView) view.findViewById(R.id.commentRecycler);
+       mCommentRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+       //获取当前事件
+        Date currentDate = new Date();
+        //定义时间格式
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        //将日期转化喂字符串
+        String dateString = dateFormat.format(currentDate);
+        //初始化数据
+        mCommentListData = new ArrayList<>();
+        CommentItemBean aCommentBean = new CommentItemBean(R.drawable.a,
+                "A馨怀中猫",replyMe+"你是不是对《夹子》有什么误解",
+                myContent,dateString);
+        CommentItemBean bCommentBean = new CommentItemBean(R.drawable.b,
+                "鲨鱼宝宝古拉",replyMe+"夹子是发不出高音的",
+                myContent,dateString);
+        CommentItemBean cCommentBean = new CommentItemBean(R.drawable.c,
+                "怡少ooo",replyMe+"你没事吧你没事吧你没事吧",
+                myContent,dateString);
+        CommentItemBean dCommentBean = new CommentItemBean(R.drawable.d,
+                "小瓒快跑",replyMe+"你没事吧，她18 19年就是这个声音，说话也是这个声音，怎么夹子这个词出来就你会用?",
+                myContent,dateString);
+        CommentItemBean eCommentBean = new CommentItemBean(R.drawable.e,
+                "告白八月",replyMe+"给你一拳 我看你发不发得出夹子音",
+                myContent,dateString);
+        mCommentListData.add(aCommentBean);
+        mCommentListData.add(bCommentBean);
+        mCommentListData.add(cCommentBean);
+        mCommentListData.add(dCommentBean);
+        mCommentListData.add(eCommentBean);
+
+        //创建适配器
+        commentAdapter = new CommentAdapter(mCommentListData);
+        //设置适配器
+        mCommentRecyclerView.setAdapter(commentAdapter);
+        return view;
     }
 }
