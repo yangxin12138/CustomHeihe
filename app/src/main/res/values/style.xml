@@ -12,4 +12,5 @@
         <item name="itemTextColor">@color/item_text_color_selector</item>
         <item name="itemRippleColor">@color/mtrl_navigation_bar_ripple_color</item>
     </style>
+
 </resources>

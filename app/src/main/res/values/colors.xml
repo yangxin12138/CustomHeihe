@@ -7,4 +7,5 @@
     <color name="transparency">#8000</color>
     <color name="divider_color">#EBEBEB</color>
     <color name="comment_username_color">#0182BC</color>
+    <color name="user_background_color">#EFE9E9</color>
 </resources>

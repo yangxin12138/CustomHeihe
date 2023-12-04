@@ -43,5 +43,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'io.github.youth5201314:banner:2.2.2'
     implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.lqm:RoundImageView:1.0.0'
 
 }

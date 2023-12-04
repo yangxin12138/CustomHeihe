@@ -1,17 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".UserFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--主要内容区-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="50dp"
-        android:text="User" />
+        android:orientation="vertical"
+        android:background="@color/divider_color">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <ImageView
+                    android:layout_margin="10dp"
+                    android:id="@+id/user_search"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/user_search"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_margin="10dp"
+                    android:id="@+id/user_menu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/user_menu"/>
+            </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp">
+                <FrameLayout
+                    android:id="@+id/user01"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:padding="16dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="就叫希儿吧"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_horizontal|center_vertical"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="等级 9级 粉丝 35 关注 5"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="120sp"/>
+                    </androidx.cardview.widget.CardView>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_view"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/b"
+                        android:elevation="5dp"
+                        android:layout_gravity="center_horizontal|top"/>
+                </FrameLayout>
 
-</FrameLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/user01"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <GridView
+                            android:padding="10dp"
+                            android:id="@+id/gridview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:numColumns="4"
+                            android:verticalSpacing="8dp"
+                            android:horizontalSpacing="8dp"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview_myalbum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/cardview_menu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_margin="10dp"
+                                android:id="@+id/user_myalbum_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:text="我的歌单"/>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/user_myalbum_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_collectalbum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cardview_myalbum"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_margin="10dp"
+                            android:id="@+id/user_collectalbum_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="收藏歌单"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/user_collectalbum_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+    <!--侧滑菜单布局-->
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="vertical">
+
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
