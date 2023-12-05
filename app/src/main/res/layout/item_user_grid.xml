@@ -17,8 +17,9 @@
             android:id="@+id/menu_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="?attr/news_title_textColor"
             android:textSize="10sp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </LinearLayout>

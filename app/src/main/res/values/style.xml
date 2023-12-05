@@ -3,14 +3,76 @@
     <style name="BottomNavigationItemStyle" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="enforceTextAppearance">true</item>
         <item name="enforceMaterialTheme">true</item>
-        <item name="android:background">?attr/colorSurface</item>
+        <item name="android:background">?attr/main_styleBackground</item>
         <item name="itemBackground">@null</item>
         <item name="itemHorizontalTranslationEnabled">false</item>
-        <item name="itemIconTint">@color/item_color_selector</item>
+        <item name="itemIconTint">?attr/main_iconTint</item>
         <item name="itemTextAppearanceInactive">?attr/textAppearanceCaption</item>
         <item name="itemTextAppearanceActive">?attr/textAppearanceCaption</item>
-        <item name="itemTextColor">@color/item_text_color_selector</item>
+        <item name="itemTextColor">?attr/main_textColor</item>
         <item name="itemRippleColor">@color/mtrl_navigation_bar_ripple_color</item>
+    </style>
+
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="main_background">@color/white</item>
+        <item name="main_styleBackground">@color/white</item>
+        <item name="main_iconTint">@color/item_color_selector</item>
+        <item name="main_textColor">@color/item_text_color_selector</item>
+        <item name="home_title_news">@color/home_page_text_color_selector</item>
+        <item name="home_title_recommend">@color/home_page_text_color_selector</item>
+        <item name="news_title_textColor">@color/black</item>
+        <item name="news_content_textColor">@color/home_text_unchecked</item>
+        <item name="news_divider">@color/divider_color</item>
+        <item name="icon_information_img">@drawable/notification_selector</item>
+        <item name="icon_comment_img">@drawable/comment_selector</item>
+        <item name="icon_like_img">@drawable/like_selector</item>
+        <item name="comment_background">@drawable/comment_mycontent_background</item>
+        <item name="user_background">@color/divider_color</item>
+        <item name="user_local_music">@drawable/local_music</item>
+        <item name="user_cloud_music">@drawable/cloud_music</item>
+        <item name="user_purchased_music">@drawable/purchased_music</item>
+        <item name="user_played_music">@drawable/played_music</item>
+        <item name="user_collect_music">@drawable/collect_music</item>
+        <item name="user_podcast_music">@drawable/podcast_music</item>
+        <item name="user_radio_music">@drawable/radio_music</item>
+        <item name="user_sleep_music">@drawable/sleep_music</item>
+        <item name="user_album_more">@drawable/more</item>
+        <item name="user_search">@drawable/user_search</item>
+        <item name="user_menu">@drawable/user_menu</item>
+        <item name="user_settings">@drawable/settings</item>
+        <item name="user_arrow_right">@drawable/arrow_right</item>
+        <item name="user_nightTheme">@drawable/night_theme</item>
+    </style>
+
+    <style name="AppTheme.Night" parent="Theme.AppCompat.NoActionBar">
+        <item name="main_background">@color/main_background_night</item>
+        <item name="main_styleBackground">@color/main_background_night</item>
+        <item name="main_iconTint">@color/item_color_selector_night</item>
+        <item name="main_textColor">@color/main_textColor</item>
+        <item name="home_title_news">@color/home_page_text_color_selector_night</item>
+        <item name="home_title_recommend">@color/home_page_text_color_selector_night</item>
+        <item name="news_title_textColor">@color/white</item>
+        <item name="news_content_textColor">@color/news_content_textColor</item>
+        <item name="news_divider">@color/divider_night</item>
+        <item name="icon_information_img">@drawable/notification_night_selector</item>
+        <item name="icon_comment_img">@drawable/comment_night_selector</item>
+        <item name="icon_like_img">@drawable/like_night_selector</item>
+        <item name="comment_background">@drawable/comment_mycontent_background_night</item>
+        <item name="user_background">@color/userBackground</item>
+        <item name="user_local_music">@drawable/local_music_night</item>
+        <item name="user_cloud_music">@drawable/cloud_music_night</item>
+        <item name="user_purchased_music">@drawable/purchased_music_night</item>
+        <item name="user_played_music">@drawable/played_music_night</item>
+        <item name="user_collect_music">@drawable/collect_music_night</item>
+        <item name="user_podcast_music">@drawable/podcast_music_night</item>
+        <item name="user_radio_music">@drawable/radio_music_night</item>
+        <item name="user_sleep_music">@drawable/sleep_music_night</item>
+        <item name="user_album_more">@drawable/more_night</item>
+        <item name="user_search">@drawable/user_search_night</item>
+        <item name="user_menu">@drawable/user_menu_night</item>
+        <item name="user_settings">@drawable/settings_night</item>
+        <item name="user_arrow_right">@drawable/arrow_right_night</item>
+        <item name="user_nightTheme">@drawable/night_theme_night</item>
     </style>
 
 </resources>

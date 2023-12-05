@@ -8,6 +8,6 @@
         android:id="@+id/news_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/divider_color"
+        android:divider="?attr/news_divider"
         android:dividerHeight="3dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

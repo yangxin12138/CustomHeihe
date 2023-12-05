@@ -120,26 +120,17 @@ public class NotificationFragment extends Fragment implements View.OnClickListen
         noti_image_information.setSelected(true);
         noti_image_comment.setSelected(false);
         noti_image_like.setSelected(false);
-        noti_image_information.setImageResource(R.drawable.information);
-        noti_image_comment.setImageResource(R.drawable.comment_line);
-        noti_image_like.setImageResource(R.drawable.like_line);
     }
 
     private void selectedComment(){
         noti_image_information.setSelected(false);
         noti_image_comment.setSelected(true);
         noti_image_like.setSelected(false);
-        noti_image_information.setImageResource(R.drawable.information_line);
-        noti_image_comment.setImageResource(R.drawable.comment);
-        noti_image_like.setImageResource(R.drawable.like_line);
     }
 
     private void selectedLike(){
         noti_image_information.setSelected(false);
         noti_image_comment.setSelected(false);
         noti_image_like.setSelected(true);
-        noti_image_information.setImageResource(R.drawable.information_line);
-        noti_image_comment.setImageResource(R.drawable.comment_line);
-        noti_image_like.setImageResource(R.drawable.like);
     }
 }

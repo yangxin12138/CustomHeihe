@@ -50,7 +50,7 @@ public class UserNameAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         UserMenuBeans menuBean = menuBeans.get(position);
-        viewHolder.menu_image.setImageResource(menuBean.getMenu_image());
+        viewHolder.menu_image.setImageDrawable(menuBean.getMenu_image());
         viewHolder.menu_name.setText(menuBean.getMenu_name());
         return convertView;
     }

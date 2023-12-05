@@ -3,4 +3,40 @@
     <declare-styleable name="RoundedImageView">
         <attr name="cornerRadius" format="dimension" />
     </declare-styleable>
+
+    <!--多主题-->
+    <!--Main-->
+    <attr name="main_background" format="color"/>
+    <attr name="main_styleBackground" format="color"/>
+    <attr name="main_iconTint" format="color"/>
+    <attr name="main_textColor" format="color"/>
+
+    <!--home-->
+    <attr name="home_title_news" format="color"/>
+    <attr name="home_title_recommend" format="color"/>
+    <!--news-->
+    <attr name="news_title_textColor" format="color"/>
+    <attr name="news_content_textColor" format="color"/>
+    <attr name="news_divider" format="color"/>
+    <!--notification-->
+    <attr name="icon_information_img" format="reference"/>
+    <attr name="icon_comment_img" format="reference"/>
+    <attr name="icon_like_img" format="reference"/>
+    <attr name="comment_background" format="reference"/>
+    <!--user-->
+    <attr name="user_background" format="color"/>
+    <attr name="user_local_music" format="reference"/>
+    <attr name="user_cloud_music" format="reference"/>
+    <attr name="user_purchased_music" format="reference"/>
+    <attr name="user_played_music" format="reference"/>
+    <attr name="user_collect_music" format="reference"/>
+    <attr name="user_podcast_music" format="reference"/>
+    <attr name="user_radio_music" format="reference"/>
+    <attr name="user_sleep_music" format="reference"/>
+    <attr name="user_album_more" format="reference"/>
+    <attr name="user_search" format="reference"/>
+    <attr name="user_menu" format="reference"/>
+    <attr name="user_settings" format="reference"/>
+    <attr name="user_nightTheme" format="reference"/>
+    <attr name="user_arrow_right" format="reference"/>
 </resources>

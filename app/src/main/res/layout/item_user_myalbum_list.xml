@@ -39,6 +39,6 @@
         android:layout_margin="10dp"
         android:padding="15dp"
         android:layout_width="50dp"
-        android:src="@drawable/more"
+        android:src="?attr/user_album_more"
         android:layout_height="50dp"/>
 </LinearLayout>

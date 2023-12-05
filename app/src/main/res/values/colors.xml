@@ -8,4 +8,11 @@
     <color name="divider_color">#EBEBEB</color>
     <color name="comment_username_color">#0182BC</color>
     <color name="user_background_color">#EFE9E9</color>
+
+    <color name="main_background_night">#292929</color>
+    <color name="main_textColor">#EFE9E9</color>
+    <color name="news_content_textColor">#CFCECE</color>
+    <color name="divider_night">#171717</color>
+    <color name="userBackground">#292929</color>
+    <color name="sleep_color">#434A54</color>
 </resources>

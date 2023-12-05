@@ -13,14 +13,14 @@
         android:layout_height="30dp"
         android:layout_marginStart="10dp"
         android:textSize="15sp"
-        android:textColor="@color/black"/>
+        android:textColor="?attr/news_title_textColor"/>
     <TextView
         android:id="@+id/recommend_item_content"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:textSize="12sp"
-        android:textColor="@color/home_text_unchecked"/>
+        android:textColor="?attr/news_content_textColor"/>
 
     <LinearLayout
         android:layout_marginStart="10dp"
@@ -52,5 +52,5 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:layout_marginTop="10dp"
-        android:background="@color/divider_color"/>
+        android:background="?attr/news_divider"/>
 </LinearLayout>

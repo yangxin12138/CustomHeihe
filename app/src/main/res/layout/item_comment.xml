@@ -52,7 +52,7 @@
             android:paddingStart="10dp"
             android:layout_marginEnd="15dp"
             android:gravity="center_vertical"
-            android:background="@drawable/comment_mycontent_background"
+            android:background="?attr/comment_background"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"/>
@@ -61,5 +61,5 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="10dp"
-        android:background="@color/divider_color"/>
+        android:background="?attr/news_divider"/>
 </LinearLayout>

@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:text="消息"
+            android:textColor="?attr/news_title_textColor"
             android:textSize="20sp"
             android:textStyle="bold"
             android:gravity="center_horizontal" />
@@ -33,21 +34,21 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:padding="10dp"
-            android:src="@drawable/information"/>
+            android:src="?attr/icon_information_img"/>
         <ImageView
             android:id="@+id/noti_icon_comment"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:padding="10dp"
-            android:src="@drawable/comment"/>
+            android:src="?attr/icon_comment_img"/>
         <ImageView
             android:id="@+id/noti_icon_like"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:padding="10dp"
-            android:src="@drawable/like"/>
+            android:src="?attr/icon_like_img"/>
     </LinearLayout>
     <FrameLayout
         android:id="@+id/notification_container"

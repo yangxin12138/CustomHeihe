@@ -1,19 +1,21 @@
 package com.twd.heihe.bean;
 
+import android.graphics.drawable.Drawable;
+
 public class UserMenuBeans {
-    int menu_image;
+    Drawable menu_image;
     String menu_name;
 
-    public UserMenuBeans(int menu_image, String menu_name) {
+    public UserMenuBeans(Drawable menu_image, String menu_name) {
         this.menu_image = menu_image;
         this.menu_name = menu_name;
     }
 
-    public int getMenu_image() {
+    public Drawable getMenu_image() {
         return menu_image;
     }
 
-    public void setMenu_image(int menu_image) {
+    public void setMenu_image(Drawable menu_image) {
         this.menu_image = menu_image;
     }
 

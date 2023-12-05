@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -29,6 +30,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences theme = getSharedPreferences("theme",MODE_PRIVATE);
+        String code = theme.getString("themeis","");
+        if (code.equals("night")){
+            this.setTheme(R.style.AppTheme_Night);
+        }else if (code.equals("light")){
+            this.setTheme(R.style.AppTheme_Light);
+        }else {
+            Log.i("yangxin", "onCreate: 没有主题色，默认light");
+            this.setTheme(R.style.AppTheme_Light);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fragmentManager = getSupportFragmentManager();
