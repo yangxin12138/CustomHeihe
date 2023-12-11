@@ -1,17 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".FavoriteFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingStart="20dp">
+        <EditText
+            android:id="@+id/favorite_search_edittext"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:textSize="15dp"
+            android:hint="请输入文本"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:paddingStart="20dp"
+            android:inputType="text"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="?attr/user_search"
+            android:layout_marginStart="10dp"
+            android:padding="8dp"
+            android:layout_toEndOf="@+id/favorite_search_edittext"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favorite_card_all"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            app:cardElevation="5dp"
+            android:layout_below="@+id/favorite_search_edittext"
+            android:foreground="?android:attr/selectableItemBackground">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="?attr/favorite_card_background">
+                <TextView
+                    android:id="@+id/favorite_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全部"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:padding="4dp"
+                    android:layout_toEndOf="@+id/favorite_all"
+                    android:src="?attr/favorite_all"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favorite_card_RPG"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/favorite_card_all"
+            app:cardElevation="5dp"
+            android:layout_below="@+id/favorite_search_edittext"
+            android:foreground="?android:attr/selectableItemBackground">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="?attr/favorite_card_background">
+                <TextView
+                    android:id="@+id/favorite_rpg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RPG"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/favorite_rpg"
+                    android:src="?attr/favorite_rpg"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favorite_card_MMO"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            app:cardElevation="5dp"
+            android:layout_toEndOf="@+id/favorite_card_RPG"
+            android:layout_below="@+id/favorite_search_edittext"
+            android:foreground="?android:attr/selectableItemBackground">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="?attr/favorite_card_background">
+                <TextView
+                    android:id="@+id/favorite_mmo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MMO"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:padding="2dp"
+                    android:layout_toEndOf="@+id/favorite_mmo"
+                    android:src="?attr/favorite_mmo"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favorite_card_indie"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            app:cardElevation="5dp"
+            android:layout_below="@+id/favorite_card_all"
+            android:foreground="?android:attr/selectableItemBackground">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="?attr/favorite_card_background">
+                <TextView
+                    android:id="@+id/favorite_indie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="独立"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:padding="2dp"
+                    android:layout_toEndOf="@+id/favorite_indie"
+                    android:src="?attr/favorite_indie"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favorite_card_FPS"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:cardElevation="5dp"
+            android:layout_toRightOf="@+id/favorite_card_indie"
+            android:layout_below="@+id/favorite_card_all"
+            android:foreground="?android:attr/selectableItemBackground">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="?attr/favorite_card_background">
+                <TextView
+                    android:id="@+id/favorite_fps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FPS"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/favorite_fps"
+                    android:padding="2dp"
+                    android:src="?attr/favorite_fps"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favorite_card_tactics"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:cardElevation="5dp"
+            android:layout_toRightOf="@+id/favorite_card_FPS"
+            android:layout_below="@+id/favorite_card_all"
+            android:foreground="?android:attr/selectableItemBackground">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="?attr/favorite_card_background">
+                <TextView
+                    android:id="@+id/favorite_tactics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="策略"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/favorite_tactics"
+                    android:padding="2dp"
+                    android:src="?attr/favorite_tactics"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/favorite_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="50dp"
-        android:text="Favorite" />
-
-</FrameLayout>
+        android:numColumns="2"
+        android:gravity="center"/>
+</LinearLayout>

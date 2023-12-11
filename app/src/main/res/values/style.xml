@@ -42,6 +42,14 @@
         <item name="user_settings">@drawable/settings</item>
         <item name="user_arrow_right">@drawable/arrow_right</item>
         <item name="user_nightTheme">@drawable/night_theme</item>
+        <item name="favorite_card_background">@color/divider_color</item>
+        <item name="favorite_all">@drawable/all_light</item>
+        <item name="favorite_rpg">@drawable/rpg_light</item>
+        <item name="favorite_mmo">@drawable/mmo_light</item>
+        <item name="favorite_indie">@drawable/indie_light</item>
+        <item name="favorite_fps">@drawable/fps_light</item>
+        <item name="favorite_tactics">@drawable/tactics_light</item>
+        <item name="favorite_price_background">@color/game_text_background</item>
     </style>
 
     <style name="AppTheme.Night" parent="Theme.AppCompat.NoActionBar">
@@ -73,6 +81,14 @@
         <item name="user_settings">@drawable/settings_night</item>
         <item name="user_arrow_right">@drawable/arrow_right_night</item>
         <item name="user_nightTheme">@drawable/night_theme_night</item>
+        <item name="favorite_card_background">@color/home_text_unchecked</item>
+        <item name="favorite_all">@drawable/all_night</item>
+        <item name="favorite_rpg">@drawable/rpg_night</item>
+        <item name="favorite_mmo">@drawable/mmo_night</item>
+        <item name="favorite_indie">@drawable/indie_night</item>
+        <item name="favorite_fps">@drawable/fps_night</item>
+        <item name="favorite_tactics">@drawable/tactics_night</item>
+        <item name="favorite_price_background">@color/home_text_unchecked</item>
     </style>
 
 </resources>

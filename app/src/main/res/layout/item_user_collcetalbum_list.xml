@@ -23,6 +23,7 @@
             android:text="woxihuan"
             android:textSize="15sp"
             android:textStyle="bold"
+            android:textColor="?attr/main_textColor"
             android:maxLines="1"
             android:ellipsize="end"
             android:gravity="bottom"/>
@@ -33,12 +34,13 @@
             android:layout_weight="1"
             android:text="1shou"
             android:textSize="10sp"
+            android:textColor="?attr/main_textColor"
             android:gravity="top"/>
     </LinearLayout>
     <ImageView
         android:layout_margin="10dp"
         android:padding="15dp"
         android:layout_width="50dp"
-        android:src="@drawable/more"
+        android:src="?attr/user_album_more"
         android:layout_height="50dp"/>
 </LinearLayout>

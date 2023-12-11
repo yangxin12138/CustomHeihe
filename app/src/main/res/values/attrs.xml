@@ -39,4 +39,14 @@
     <attr name="user_settings" format="reference"/>
     <attr name="user_nightTheme" format="reference"/>
     <attr name="user_arrow_right" format="reference"/>
+
+    <!--favorite-->
+    <attr name="favorite_card_background" format="color"/>
+    <attr name="favorite_all" format="reference"/>
+    <attr name="favorite_rpg" format="reference"/>
+    <attr name="favorite_mmo" format="reference"/>
+    <attr name="favorite_indie" format="reference"/>
+    <attr name="favorite_fps" format="reference"/>
+    <attr name="favorite_tactics" format="reference"/>
+    <attr name="favorite_price_background" format="color"/>
 </resources>

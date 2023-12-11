@@ -15,4 +15,7 @@
     <color name="divider_night">#171717</color>
     <color name="userBackground">#292929</color>
     <color name="sleep_color">#434A54</color>
+    <color name="game_text">#989797</color>
+    <color name="game_text_background">#F3F1F1</color>
+
 </resources>

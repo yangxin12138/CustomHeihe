@@ -64,13 +64,15 @@
                             android:text="就叫希儿吧"
                             android:textStyle="bold"
                             android:textSize="20sp"
+                            android:textColor="?attr/main_textColor"
                             android:layout_gravity="center_horizontal|center_vertical"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="等级 9级 粉丝 35 关注 5"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="120sp"/>
+                            android:layout_marginTop="120sp"
+                            android:textColor="?attr/main_textColor"/>
                     </androidx.cardview.widget.CardView>
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/circle_view"
